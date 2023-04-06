@@ -1,0 +1,17 @@
+Welcome to Module 1, Introduction to CI/CD.
+In this module, you will get a broad introduction to Continuous Integration and Continuous Delivery,
+or CI/CD as it is commonly referred to, which is an automated approach to developing and
+delivering software with repeatability and reliability.
+You’ll discover what CI and CD are and the benefits they bring when implemented properly
+in your DevOps pipeline.
+You’ll explore popular CI/CD tools and see why it’s acceptable for different teams
+within an organization to use different CI/CD tools,
+as long as they are eliminating manual procedures.
+You’ll also learn about Infrastructure as Code (or IaC),
+which is the process by which you use code to automate the provisioning and the management
+of your infrastructure.
+IaC is a foundational concept for implementing automation.
+There are no labs in this first module.
+The goal is to gain a high-level understanding of what CI/CD is before we dive deep into
+each topic individually.
+Let's get started.

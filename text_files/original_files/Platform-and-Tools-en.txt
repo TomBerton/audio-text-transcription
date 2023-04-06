@@ -1,0 +1,44 @@
+Welcome to ‘Platform and Tools’.
+After watching this video, you will be able to:
+Understand it’s Ok to use different tools for CI/CD,
+and identify some common tools for CI/CD.
+There are lots of tools your pipelines can use even within the same company.
+Different line of business applications (or LOBs) within a single organization being run
+by different teams,
+might be using different tools, and it doesn’t matter that they use different tools.
+So, their source code management systems, their build systems, their continuous integration
+systems, their repositories, and so on, might be running on different tools.
+Maybe there’s Jenkins, there’s Travis, there’s Nexus and there’s JFrog Artifactory,
+but the specific tool being used isn’t important.
+What matters is that they’re using a tool to automate these processes instead of doing
+them manually.
+In fact, there's a plethora of tools for CI/CD you can choose from.
+For example, if you look at just the ‘CI’ box in the ‘Build’ column of this diagram
+of pipeline tools,
+you can see Team City, Jenkins, Travis CI, Bamboo, Codeship, Snap, and Go, to name but
+a few.
+And you will find that most of the top ones all seem similar and have similar ways of
+working and similar concepts.
+So, if you try out a tool, and decide that you don't like it, you can just keep trying
+new ones until you find a tool that you like to use.
+Let’s have a brief overview of some of the common tools for CI/CD.
+Jenkins is CI/CD software that is installed on a server where the central build will take
+place.
+It is one of the oldest, most popular, and most complex of all the CI/CD tools.
+Circle CI is a CI/CD platform that can be used to implement DevOps practices.
+It performs deployments for Continuous Delivery and you define workflows inside a ‘circle.yaml’
+file.
+Travis CI is a hosted CI service that helps developers build and test software projects
+hosted on GitHub and Bitbucket.
+Travis CI was the first CI service to provide free services to open-source projects.
+It also performs deployments for Continuous Delivery and you define a workflow inside
+a ‘. travis.yaml’ file.
+GitHub Actions is a CI/CD platform that enables you to automate your build, test, and deploy
+GitHub workflows. Unlike other tools, it only works with GitHub.
+In this video, you learned that
+different line of business applications within the same organization may have many teams
+each using different tools.
+It’s OK to use different tools for CI/CD,
+what’s important is that the processes are being automated instead of being done manually,
+and there are a lots of tools out there for CI/CD and you can keep trying new ones
+until you find one that you like to use.

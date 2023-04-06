@@ -54,6 +54,21 @@ This repository will transcribe audio files or audio in video files to text usin
 
 * Will only transcribe from a foreign language to English, not English to a target language.
 
-## TO DO:
+## Comparing transcription models for speed.
 
-* Use smaller models, `tiny.en`, `base.en`, and `small.en`, which may transcribe the files faster and compared to other models as well as the audio for accuracy.
+* I compared the `tiny.en`, `base.en`, `small.en`, and `medium.en` models.
+
+* The `Platform_and_Tools.mp4` is 9.5 MB and the `Introduction_to_CI_CD.mp4`is 5.4 MB.
+
+* Here is the transcription times for each file with each model.
+
+    | Model  | 9.5 MB  | 5.4 MB  |
+    |---|---|---|
+    | `tiny.en` |  11 seconds |  4 seconds |
+    | `base.en`  | 18 seconds |  7 seconds |
+    | `small.en`  | 51 seconds |  19 seconds |
+    | `medium.en`  |  181 seconds |  165 seconds |
+
+    * The transcribed audio files are [here](/text_files/transcribed_files/).
+
+    * The text files that are downloaded from the edX course are [here](/text_files/original_files/).
