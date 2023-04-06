@@ -42,25 +42,25 @@ This repository will transcribe audio files or audio in video files to text usin
 
     * The first time you run the script the model will download, which may take a few minutes.
 
-
-* **Note:** I transcribed two `.mp4` files from an edX course that I am taking, "Continuous Integration and Delivery (CI/CD)". Total size was 16Mb and the script took about 4 minutes to convert the files to [text files](text_files).
-
 ## Pros
 
 * There is no API key needed.
 * There are few dependencies.
+* Can transcribe from a language to English.
 
 ## Cons
 
-* Will only transcribe from a foreign language to English, not English to a target language.
+* Cannot transcribed English to a another language.
 
 ## Comparing transcription models for speed.
 
 * I compared the `tiny.en`, `base.en`, `small.en`, and `medium.en` models.
 
-* The `Platform_and_Tools.mp4` is 9.5 MB and the `Introduction_to_CI_CD.mp4`is 5.4 MB.
+* The two videos that were transcribed are:
+    * `Platform_and_Tools.mp4`, 9.5 MB
+    * `Introduction_to_CI_CD.mp4`, 5.4 MB.
 
-* Here is the transcription times for each file with each model.
+* Transcription times for each file using each model.
 
     | Model  | 9.5 MB  | 5.4 MB  |
     |---|---|---|
