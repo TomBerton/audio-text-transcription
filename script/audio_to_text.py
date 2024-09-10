@@ -1,6 +1,5 @@
 import os
 import whisper
-import time
 from pathlib import Path
 
 
@@ -18,23 +17,34 @@ print("Number of files: ", num_files)
 
 # Loop through all files in the directory
 for dirpath, dirnames, filenames in os.walk(directory):
-        for filename in filenames:
-            # Check if the file is an mp4 file
-            if filename.endswith('.mp4'):
-                filepath = os.path.join(dirpath, filename)
-                # Get the start time
-                start_time = time.time()
-                result = model.transcribe(filepath, fp16=False, verbose=True)
+    # Sort the filenames alphabetically
+    filenames.sort()
+    for filename in filenames:
+        # Check if the file is an mp4 file
+        if filename.endswith('.mp4'):
+            print(filename)
+            filepath = os.path.join(dirpath, filename)
+            # Transcribe the audio
+            result = model.transcribe(filepath, fp16=False, verbose=True)
 
-                # Print the file name.
-                print(result['segments'][0]['text'])
+            # Define paths for two text files
+            text_file_1 = filepath[:-4] + '.txt'
+            text_file_2 = filepath[:-4] + '_timestamps.txt'
 
-                # Save the text to a new file in the same directory
-                text_file = (filepath[:-4] + '.txt')
+            try:
+                # Write full transcription to text_file_1
+                with open(text_file_1, 'w') as f1:
+                    f1.write(result["text"])
 
-                # Write the text to the text file.
-                with open(text_file, 'w') as f:
-                    f.write(result["text"])
+                # Write timestamped segments to text_file_2
+                with open(text_file_2, 'w') as f2:
+                    for segment in result['segments']:
+                        start = segment['start']
+                        end = segment['end']
+                        text = segment['text']
+                        f2.write(f"[{start} - {end}] {text}\n")
 
-                # Print the elapsed time to convert the audio file.
-                print("--- %s seconds ---" % (time.time() - start_time))
+                print(f"Saved transcription to {text_file_1} and {text_file_2}")
+
+            except Exception as e:
+                print(f"Error writing to file: {e}")
